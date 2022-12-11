@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Chercher une personne</h2>
+
+<form>
+    <div class="form-group">
+        <label for="exampleInputEmail1">First Name</label>
+        <input type="text" class="form-control" id="exampleInputName" placeholder="Enter first_name">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Country</label>
+        <input type="text" class="form-control" id="exampleInputCountry" placeholder="Enter country">
+    </div>
+
+    <button type="submit" class="btn btn-primary"> Rechercher </button>
+
+    
+</form>
+
+<div>
+    <a asp-action="Index">Retour à la liste </a>
+</div>

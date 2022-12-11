@@ -1,0 +1,45 @@
+﻿@model List<TP3.Models.Person>
+@{
+    ViewBag.Title = "Toutes les Personnes";
+}
+
+
+<h2> La liste des Personnes :</h2>
+
+<h3>
+    <a asp-action="search">Search</a>
+</h3>
+
+<div class="container">
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">First name</th>
+                <th scope="col">Last name</th>
+                <th scope="col">Birth day</th>
+                <th scope="col">Email</th>
+                <th scope="col">Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (TP3.Models.Person p in Model)
+            {
+                <tr>
+                    <th scope="row">@p.id</th>
+                    <td>@p.first_name</td>
+                    <td>@p.last_name</td>
+                    <td>@p.email</td>
+                    <td>@p.birthDate</td>
+                    <td>@p.country</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    
+
+</div>
+
+
+

@@ -1,0 +1,36 @@
+﻿@model TP3.Models.Person
+@{
+    ViewBag.Title = "Info_Personne";
+}
+
+@if (ViewBag.notFound)
+{
+    <h3>THIS PERSON IS NOT FOUND !</h3>
+}
+else
+{
+    <h2>La personne ayant l'id @Model.id possède les informations suivantes : </h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                @Model.first_name
+            </div>
+            <div class="col-sm">
+                @Model.last_name
+            </div>
+            <div class="col-sm">
+                @Model.email
+            </div>
+            <div class="col-sm">
+                @Model.birthDate
+            </div>
+            <div class="col-sm">
+                @Model.country
+            </div>
+        </div>
+    </div>
+
+<div>
+    <a asp-action="Index">Retour à la liste </a>
+</div>
+
